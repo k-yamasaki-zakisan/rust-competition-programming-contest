@@ -1,0 +1,12 @@
+[package]
+name = "rust-competition-programming-contest"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[[bin]]
+name = "a_01"
+path = "src/tessoku-book/A01.rs"
