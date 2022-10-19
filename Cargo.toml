@@ -8,5 +8,5 @@ edition = "2021"
 [dependencies]
 
 [[bin]]
-name = "a_01"
+name = "tessoku_book_a_01"
 path = "src/tessoku-book/A01.rs"
