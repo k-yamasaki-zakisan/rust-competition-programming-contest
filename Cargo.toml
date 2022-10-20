@@ -6,7 +6,12 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+proconio = "0.3.6"
 
 [[bin]]
 name = "tessoku_book_a_01"
 path = "src/tessoku-book/A01.rs"
+
+[[bin]]
+name = "tessoku_book_a_02"
+path = "src/tessoku-book/A02.rs"
