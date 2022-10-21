@@ -9,9 +9,5 @@ edition = "2021"
 proconio = "0.3.6"
 
 [[bin]]
-name = "tessoku_book_a_01"
-path = "src/tessoku-book/A01.rs"
-
-[[bin]]
-name = "tessoku_book_a_02"
-path = "src/tessoku-book/A02.rs"
+name = "tessoku_book_a_03"
+path = "src/tessoku-book/A03.rs"
