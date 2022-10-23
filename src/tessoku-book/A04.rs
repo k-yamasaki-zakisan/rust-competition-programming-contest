@@ -4,7 +4,7 @@ use proconio::input;
 // 0埋め(Python: zfill)
 fn main() {
     input! {
-      n: i32
+        n: i32
     }
 
     let ans = format!("{:b}", n);

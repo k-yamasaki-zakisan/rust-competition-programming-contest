@@ -7,10 +7,10 @@ fn main() {
       a: [i32; n],
     }
     for num in a {
-      if num == x {
-        println!("Yes");
-        return
-      }
+        if num == x {
+            println!("Yes");
+            return;
+        }
     }
     println!("No");
 }
