@@ -3,7 +3,7 @@ use proconio::input;
 // ２重ループ全探索
 fn main() {
     input! {
-      nk: [i32; 2],
+        nk: [i32; 2],
     }
 
     let n = nk[0];
