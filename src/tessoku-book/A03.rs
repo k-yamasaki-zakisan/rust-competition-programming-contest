@@ -7,14 +7,14 @@ fn main() {
       p: [i32; nk[0]],
       q: [i32; nk[0]],
     }
-    
+
     for i in p {
-      for j in &q {
-        if i + j == nk[1] {
-          println!("Yes");
-          return
+        for j in &q {
+            if i + j == nk[1] {
+                println!("Yes");
+                return;
+            }
         }
-      }
     }
     println!("No");
 
