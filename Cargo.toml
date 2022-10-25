@@ -9,6 +9,18 @@ edition = "2021"
 proconio = "0.3.6"
 
 [[bin]]
+name = "tessoku_book_a_01"
+path = "src/tessoku-book/A01.rs"
+
+[[bin]]
+name = "tessoku_book_a_02"
+path = "src/tessoku-book/A02.rs"
+
+[[bin]]
+name = "tessoku_book_a_03"
+path = "src/tessoku-book/A03.rs"
+
+[[bin]]
 name = "tessoku_book_a_04"
 path = "src/tessoku-book/A04.rs"
 
@@ -23,6 +35,10 @@ path = "src/tessoku-book/A06.rs"
 [[bin]]
 name = "tessoku_book_a_07"
 path = "src/tessoku-book/A07.rs"
+
+[[bin]]
+name = "tessoku_book_a_08"
+path = "src/tessoku-book/A08.rs"
 
 [[bin]]
 name = "test"
