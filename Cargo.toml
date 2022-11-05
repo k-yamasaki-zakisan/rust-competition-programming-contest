@@ -7,63 +7,54 @@ edition = "2021"
 
 [dependencies]
 proconio = "0.3.6"
-
-[[bin]]
-name = "tessoku_book_a_01"
-path = "src/tessoku-book/A01.rs"
-
-[[bin]]
-name = "tessoku_book_a_02"
-path = "src/tessoku-book/A02.rs"
-
-[[bin]]
-name = "tessoku_book_a_03"
-path = "src/tessoku-book/A03.rs"
-
-[[bin]]
-name = "tessoku_book_a_04"
-path = "src/tessoku-book/A04.rs"
-
-[[bin]]
-name = "tessoku_book_a_05"
-path = "src/tessoku-book/A05.rs"
-
-[[bin]]
-name = "tessoku_book_a_06"
-path = "src/tessoku-book/A06.rs"
-
-[[bin]]
-name = "tessoku_book_a_07"
-path = "src/tessoku-book/A07.rs"
-
-[[bin]]
-name = "tessoku_book_a_08"
-path = "src/tessoku-book/A08.rs"
-
-[[bin]]
-name = "tessoku_book_a_09"
-path = "src/tessoku-book/A09.rs"
-
-[[bin]]
-name = "tessoku_book_a_10"
-path = "src/tessoku-book/A10.rs"
-
-[[bin]]
-name = "tessoku_book_a_11"
-path = "src/tessoku-book/A11.rs"
-
-[[bin]]
-name = "tessoku_book_a_12"
-path = "src/tessoku-book/A12.rs"
-
-[[bin]]
-name = "tessoku_book_a_13"
-path = "src/tessoku-book/A13.rs"
-
-[[bin]]
-name = "tessoku_book_a_14"
-path = "src/tessoku-book/A14.rs"
-
 [[bin]]
 name = "test"
 path = "src/test.rs"
+[[bin]]
+name = "main"
+path = "src/main.rs"
+[[bin]]
+name = "tessoku-book-A09"
+path = "src/tessoku-book/A09.rs"
+[[bin]]
+name = "tessoku-book-A08"
+path = "src/tessoku-book/A08.rs"
+[[bin]]
+name = "tessoku-book-A07"
+path = "src/tessoku-book/A07.rs"
+[[bin]]
+name = "tessoku-book-A03"
+path = "src/tessoku-book/A03.rs"
+[[bin]]
+name = "tessoku-book-A13"
+path = "src/tessoku-book/A13.rs"
+[[bin]]
+name = "tessoku-book-A02"
+path = "src/tessoku-book/A02.rs"
+[[bin]]
+name = "tessoku-book-A12"
+path = "src/tessoku-book/A12.rs"
+[[bin]]
+name = "tessoku-book-A06"
+path = "src/tessoku-book/A06.rs"
+[[bin]]
+name = "tessoku-book-A01"
+path = "src/tessoku-book/A01.rs"
+[[bin]]
+name = "tessoku-book-A11"
+path = "src/tessoku-book/A11.rs"
+[[bin]]
+name = "tessoku-book-A05"
+path = "src/tessoku-book/A05.rs"
+[[bin]]
+name = "tessoku-book-A15"
+path = "src/tessoku-book/A15.rs"
+[[bin]]
+name = "tessoku-book-A04"
+path = "src/tessoku-book/A04.rs"
+[[bin]]
+name = "tessoku-book-A14"
+path = "src/tessoku-book/A14.rs"
+[[bin]]
+name = "tessoku-book-A10"
+path = "src/tessoku-book/A10.rs"
