@@ -1,36 +1,29 @@
 use proconio::input;
 
-use std::collections::HashSet;
+use std::collections::HashMap;
 
-// 二組に分けて検索
+// 座標圧縮
 fn main() {
     input! {
         n: usize,
-        k: usize,
-        a: [usize; n],
-        b: [usize; n],
-        c: [usize; n],
-        d: [usize; n],
+        mut a: [usize; n],
     }
-    let mut ab = HashSet::new();
-    for aa in a.iter().take(n) {
-        for bb in b.iter().take(n) {
-            ab.insert(aa + bb);
-        }
-    }
-    let mut cd = HashSet::new();
-    for cc in c.iter().take(n) {
-        for dd in d.iter().take(n) {
-            cd.insert(cc + dd);
-        }
-    }
+    let mut a_clone = a.clone();
+    a_clone.sort();
 
-    for abab in ab {
-        let tmp = k - abab;
-        if cd.contains(&tmp) {
-            println!("Yes");
-            return;
-        }
+    let mut nums_map = HashMap::new();
+    let mut cnt = 0;
+    for aa in a_clone {
+        nums_map.entry(aa).or_insert_with(|| {
+            cnt += 1;
+            cnt
+        });
     }
-    println!("No");
+    let mut ans = vec![];
+    for aa in a {
+        ans.push(nums_map[&aa])
+    }
+    // 配列空白区切りで表示
+    let dst: Vec<String> = ans.iter().map(|x| x.to_string()).collect();
+    println!("{}", dst.join(" "));
 }
