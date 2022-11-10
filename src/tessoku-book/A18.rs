@@ -21,5 +21,6 @@ fn main() {
             i -= 1;
         }
     }
+    // 三項演算子
     println!("{}", if dp[s] { "Yes" } else { "No" });
 }
