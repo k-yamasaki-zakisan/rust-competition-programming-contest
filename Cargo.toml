@@ -7,6 +7,7 @@ edition = "2021"
 
 [dependencies]
 proconio = "0.3.6"
+
 [[bin]]
 name = "test"
 path = "src/test.rs"
@@ -97,3 +98,6 @@ path = "src/tessoku-book/A27.rs"
 [[bin]]
 name = "tessoku-book-A28"
 path = "src/tessoku-book/A28.rs"
+[[bin]]
+name = "tessoku-book-A29"
+path = "src/tessoku-book/A29.rs"
