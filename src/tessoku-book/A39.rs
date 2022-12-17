@@ -1,20 +1,23 @@
+use std::collections::HashMap;
+
 use proconio::input;
 
-// ２つ目の要素でソートする
 fn main() {
     input! {
         n: usize,
-        mut lr: [(i32, i32); n],
+        a: [usize; n]
     }
-    lr.sort_by(|l, r| l.1.partial_cmp(&(r.1)).unwrap());
 
-    let mut now = 0;
-    let mut cnt = 0;
-    for (l, r) in lr {
-        if now <= l {
-            cnt += 1;
-            now = r;
+    let mut map: HashMap<usize, usize> = HashMap::new();
+    for i in 0..n {
+        *map.entry(a[i]).or_insert(0) += 1;
+    }
+
+    let mut ans = 0;
+    for (_, value) in map {
+        if value >= 3 {
+            ans += value * (value - 1) * (value - 2) / 6
         }
     }
-    println!("{}", cnt)
+    println!("{}", ans);
 }
