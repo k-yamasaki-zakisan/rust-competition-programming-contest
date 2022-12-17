@@ -1,23 +1,20 @@
-use std::collections::HashMap;
-
 use proconio::input;
 
+// よくわからん分類
 fn main() {
     input! {
         n: usize,
-        a: [usize; n]
+        mut lr: [(i32, i32); n],
     }
-
-    let mut map: HashMap<usize, usize> = HashMap::new();
-    for i in 0..n {
-        *map.entry(a[i]).or_insert(0) += 1;
-    }
-
-    let mut ans = 0;
-    for (_, value) in map {
-        if value >= 3 {
-            ans += value * (value - 1) * (value - 2) / 6
+    lr.sort_by(|l, r| l.1.partial_cmp(&(r.1)).unwrap());
+    // println!("{:?}", lr);
+    let mut now = 0;
+    let mut cnt = 0;
+    for (l, r) in lr {
+        if now <= l {
+            cnt += 1;
+            now = r;
         }
     }
-    println!("{}", ans);
+    println!("{}", cnt)
 }
