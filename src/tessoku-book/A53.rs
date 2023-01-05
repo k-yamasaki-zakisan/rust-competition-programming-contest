@@ -1,25 +1,24 @@
 use proconio::input;
-use std::collections::BinaryHeap;
+use std::collections::HashMap;
 
-// heapq
+// dist
 fn main() {
     input! {
         q: usize,
     }
-    let mut memo: BinaryHeap<i32> = BinaryHeap::new();
+    let mut memo: HashMap<String, usize> = HashMap::new();
     for _ in 0..q {
         input! {
-            x: usize
+            x: usize,
+            name: String
         }
         if x == 1 {
             input! {
-                y: i32
+                y: usize
             }
-            memo.push(-y);
-        } else if x == 2 {
-            println!("{}", -(*memo.peek().unwrap()));
+            memo.insert(name, y);
         } else {
-            memo.pop().unwrap();
+            println!("{}", memo[&name]);
         }
     }
 }
