@@ -1,7 +1,7 @@
 use proconio::input;
 use std::collections::HashMap;
 
-// dist
+// heapq
 fn main() {
     input! {
         q: usize,
