@@ -13,20 +13,20 @@ fn main() {
         root[a - 1].push(b - 1);
         root[b - 1].push(a - 1);
     }
-    let mut visited = vec![false; n];
-    visited[0] = true;
+    let mut visited = vec![-1; n];
+    visited[0] = 0;
     let mut stack: VecDeque<usize> = VecDeque::new();
     stack.push_back(0);
     while !stack.is_empty() {
         let now = stack.pop_front().unwrap();
         for &next in &root[now] {
-            if !visited[next] {
+            if visited[next] == -1 {
                 stack.push_back(next);
-                visited[next] = true;
+                visited[next] = visited[now] + 1;
             }
         }
     }
-    // 配列の文字列化
-    let flag = !visited.iter().any(|&e| !e);
-    println!("The graph is {}connected.", if flag { "" } else { "not " });
+    for v in visited {
+        println!("{}", v);
+    }
 }
