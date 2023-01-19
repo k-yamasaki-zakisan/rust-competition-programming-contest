@@ -13,6 +13,7 @@ fn main() {
         root[b].push(a);
     }
     for i in 1..=n {
+        // 配列の文字列化
         let children = root[i]
             .iter()
             .map(|x| x.to_string())

@@ -26,7 +26,6 @@ fn main() {
             }
         }
     }
-    // 配列の文字列化
     let flag = !visited.iter().any(|&e| !e);
     println!("The graph is {}connected.", if flag { "" } else { "not " });
 }
