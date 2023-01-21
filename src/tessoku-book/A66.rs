@@ -52,8 +52,8 @@ impl UnionFind {
 fn main() {
     input! {
         n: usize,
-        q: usize,
-        a: [(usize, usize, usize); q],
+        m: usize,
+        abc: [(usize, usize, usize); m],
     }
     let mut uf = UnionFind::new(n);
     for (flag, s, t) in a {

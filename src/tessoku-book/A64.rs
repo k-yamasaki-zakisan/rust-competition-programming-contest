@@ -23,7 +23,7 @@ fn dij(cost: Vec<Vec<(usize, usize)>>, start: usize) -> Vec<usize> {
     distance
 }
 
-// ダイクストラ法
+// ダイクストラ法+heap
 fn main() {
     input! {
         n: usize,
