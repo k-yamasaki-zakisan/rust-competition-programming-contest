@@ -1,4 +1,5 @@
 use proconio::input;
+use std::{cmp::Reverse, collections::BinaryHeap};
 
 struct UnionFind {
     par: Vec<usize>,
@@ -48,20 +49,26 @@ impl UnionFind {
     }
 }
 
-// UnionFind
+// 最小全域木
 fn main() {
     input! {
         n: usize,
         m: usize,
         abc: [(usize, usize, usize); m],
     }
-    let mut uf = UnionFind::new(n);
-    for (flag, s, t) in a {
-        if flag == 1 {
-            uf.unite(s - 1, t - 1);
-        } else {
-            let is_same = uf.is_same(s - 1, t - 1);
-            println!("{}", if is_same { "Yes" } else { "No" })
-        }
+    let mut heap = BinaryHeap::new();
+    for (a, b, c) in abc {
+        heap.push((Reverse(c), a - 1, b - 1));
     }
+
+    let mut uf = UnionFind::new(n);
+    let mut ans = 0;
+    while let Some((Reverse(c), a, b)) = heap.pop() {
+        if uf.is_same(a, b) {
+            continue;
+        }
+        ans += c;
+        uf.unite(a, b);
+    }
+    println!("{}", ans);
 }
