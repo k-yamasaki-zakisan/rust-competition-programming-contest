@@ -206,3 +206,6 @@ path = "src/tessoku-book/A73.rs"
 [[bin]]
 name = "tessoku-book-A74"
 path = "src/tessoku-book/A74.rs"
+[[bin]]
+name = "tessoku-book-A75"
+path = "src/tessoku-book/A75.rs"
