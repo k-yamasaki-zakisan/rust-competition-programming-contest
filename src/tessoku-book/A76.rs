@@ -22,12 +22,12 @@ fn main() {
     dp[1] = -1;
     for i in 0..max_n - 1 {
         let now_point = points[i];
-        let next_min_point = now_point + l;
+        let next_min_point = now_point + l - 1;
         let mut l_i = 0;
         let mut r_i = max_n;
         while 1 < r_i - l_i {
             let ii = (l_i + r_i) / 2;
-            if points[ii] < next_min_point {
+            if points[ii] <= next_min_point {
                 l_i = ii;
             } else {
                 r_i = ii;
