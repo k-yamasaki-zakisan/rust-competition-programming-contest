@@ -3,17 +3,28 @@ use proconio::input;
 // 二分探索
 fn main() {
     input! {
-        n: f64,
+        n: usize,
+        mut a: [usize; n],
+        q: usize,
+        x: [usize; q],
     }
-    let mut l = 0.00;
-    let mut r: f64 = n;
-    while 1.0 < r * 100000.0 - l * 100000.0 {
-        let a = (l + r) / 2.0;
-        if a * a * a + a <= n {
-            l = a;
-        } else {
-            r = a;
+
+    a.sort();
+    for &x_val in x.iter() {
+        if x_val <= a[0] {
+            println!("0");
+            continue;
         }
+        let mut l = 0;
+        let mut r = a.len();
+        while 1 < r - l {
+            let ii = (l + r) / 2;
+            if a[ii] < x_val {
+                l = ii;
+            } else {
+                r = ii;
+            }
+        }
+        println!("{}", r);
     }
-    println!("{}", l)
 }
