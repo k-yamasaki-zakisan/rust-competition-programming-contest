@@ -1,7 +1,7 @@
 use proconio::input;
 use proconio::marker::Chars;
 
-// dp
+// dp（文字列から複数除去、回分作成）
 fn main() {
     input! {
         n: usize,
