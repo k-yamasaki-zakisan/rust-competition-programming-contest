@@ -1,3 +1,5 @@
+// @see https://rustforbeginners.hatenablog.com/entry/traveling-salesman-dpl-2-a
+
 use proconio::input;
 
 // dp（巡回セールスマン）
