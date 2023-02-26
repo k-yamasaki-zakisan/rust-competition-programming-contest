@@ -8,7 +8,6 @@ fn main() {
     }
     // 2重配列のソート（x昇順, y降順）
     xy.sort_by_cached_key(|&(x, y)| (x, -y));
-    // println!("{:?}", xy);
     let mut dp: Vec<i32> = vec![xy[0].1];
     for (x, y) in xy {
         let i: usize = bisect(&dp, y);
