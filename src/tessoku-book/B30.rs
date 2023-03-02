@@ -8,10 +8,12 @@ fn main() {
         h: usize,
         w: usize,
     }
+    //  手順 1：分子を求める
     let mut a = 1;
     for i in 1..=(h + w - 2) {
         a = (a * i) % MOD;
     }
+    // 手順 2：分母を求める
     let mut b = 1;
     for i in 1..h {
         b = (b * i) % MOD;
@@ -19,6 +21,7 @@ fn main() {
     for i in 1..w {
         b = (b * i) % MOD;
     }
+    //手順 3：答えを求める
     let ans = (a * mod_pow(b, MOD - 2, MOD)) % MOD;
     println!("{}", ans);
 }
