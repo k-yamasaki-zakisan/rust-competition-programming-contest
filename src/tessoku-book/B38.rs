@@ -3,7 +3,7 @@ use proconio::marker::Chars;
 
 const MOD: usize = 1000000007;
 
-//
+// 山の問題（左右からリニアスキャンして見る配列を作るだけ）
 fn main() {
     input! {
         n: usize,
