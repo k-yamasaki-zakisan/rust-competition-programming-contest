@@ -9,6 +9,7 @@ const MOD: usize = 1000000007;
 const MAX: usize = 1 << 62;
 const INF: usize = 1 << 62;
 
+// dfs
 fn main() {
     input! {
         n: usize,
