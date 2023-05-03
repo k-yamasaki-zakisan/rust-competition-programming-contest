@@ -16,6 +16,7 @@ fn main() {
     let mut memo = vec![];
     memo.push(1);
     memo.push(d);
+    // 平方根の処理
     for num in 2..((d as f64).sqrt() as i64) + 1 {
         if d % num == 0 {
             memo.push(num);
