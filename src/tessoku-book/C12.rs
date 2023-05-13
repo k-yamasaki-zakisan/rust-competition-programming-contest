@@ -9,7 +9,7 @@ const MOD: usize = 1000000007;
 const INF: usize = 1 << 62;
 const INF_MINUS: i64 = -1000000007;
 
-// dp
+// dp（指定数分割したときのある指標の最大化）
 fn main() {
     input! {
         n: usize,
